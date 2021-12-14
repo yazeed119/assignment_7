@@ -10,12 +10,7 @@ class User {
 
   
   save() {
-   /* let newdate = new Date();
-    let year = d.getFullYear();
-    let month = d.getMonth() + 1;
-    let date = d.getDate();
 
-    let createdAtDate = `${yyyy}-${mm}-${dd}`;*/
 
 
     

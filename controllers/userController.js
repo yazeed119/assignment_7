@@ -23,11 +23,9 @@ exports.createNewUser = async (req, res, next) => {
     next(error);
   }
 };
-
 exports.getUserById = async (req, res, next) => {
   try {
     let userId = req.params.user_id;
-
     let [user, _] = await Post.findById(userId);
 
     res.status(200).json({ user: user[0] });
