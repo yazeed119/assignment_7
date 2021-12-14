@@ -64,13 +64,13 @@ var databaseConfig = {
       idleTimeoutMillis: 30000
   }
 };
+
 var options = {
   ignoreList: ["sysdiagrams"], 
   tables: [],                  
   outputDirectory: 'somedir',
   log: true, 
   header: false      
-            
 };
 
 
