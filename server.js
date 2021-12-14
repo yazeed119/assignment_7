@@ -68,8 +68,9 @@ var options = {
   ignoreList: ["sysdiagrams"], 
   tables: [],                  
   outputDirectory: 'somedir',
-  log: true,
-  header: false                
+  log: true, 
+  header: false      
+            
 };
 
 
