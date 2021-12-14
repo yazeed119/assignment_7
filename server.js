@@ -1,10 +1,13 @@
 require("dotenv").config(); // ALLOWS ENVIRONMENT VARIABLES TO BE SET ON PROCESS.ENV SHOULD BE AT TOP
-
 const express = require("express");
+var MssqlExport = require('mssql')
+const fs = require('fs');
+const mysql = require('mysql2/promise')
 const upload = require('express-fileupload');
 const app = express();
 const all =  require("./controllers/userController.js");
 // Middleware
+
 app.use(express.json()); // parse json bodies in the request object
 
 
@@ -34,6 +37,47 @@ app.post('/', (req, res) =>{
         })
     }
 })
+
+
+
+
+
+
+
+
+
+
+
+var dbconfig = {
+  user: 'username',
+  password: 'pass',
+  server: 'servername',
+  database: 'dbname',
+  requestTimeout: 320000,
+  pool: {
+      max: 20,
+      min: 12,
+      idleTimeoutMillis: 30000
+  }
+};
+var options = {
+  ignoreList: ["sysdiagrams"], // tables to ignore
+  tables: [],                  // empty to export all the tables
+  outputDirectory: 'somedir',
+  log: true,
+  header: false                // true to export column names as csv header
+};
+
+
+function MssqlExport(dbconfig, options)
+{
+//.then(()
+  console.log("All done successfully!");
+  process.exit(0);
+  console.log(err.toString());
+  process.exit(-1);
+};
+
 
 
 
