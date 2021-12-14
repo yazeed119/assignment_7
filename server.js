@@ -8,7 +8,6 @@ const app = express();
 const all =  require("./controllers/userController.js");
 
 
-
 class importFile{
 
   constructor(){
